@@ -11,22 +11,16 @@
   text-transform: uppercase;
 }
 
-.carrito {
+.icon {
   background-color: transparent;
   border: none;
   max-width: 4rem;
+  margin-left: 1rem;
   position: relative;
-  z-index: 100;
-  
+  z-index: 100; 
 }
 
-.carrito #carrito {
-  display: none;
-  position: absolute;
-  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
-}
-
-.carrito:hover #carrito {
+.icon:hover #icon {
   display: block;
   background-color: white;
   padding: 10px;
@@ -40,20 +34,51 @@
   margin-right: unset;
 }
 
-#carrito img {
+svg{
+  width: 3rem;
+  height: 3rem;
+  color: white;
+}
+
+svg:hover{
+  color: rgb(63, 148, 253);
+}
+
+.popular:hover svg{
+  color: red;
+  cursor: pointer;
+}
+
+.market:hover svg{
+  color: rgb(0, 4, 255);
+  cursor: pointer;
+}
+
+.favorite:hover svg{
+  color: rgb(218, 255, 8);
+  cursor: pointer;
+}
+
+.profile:hover svg{
+  color: rgba(255, 255, 255, 0.493);
+  cursor: pointer;
+}
+
+#icon img {
   width: 30px;
 }
 
-#carrito .btn-danger {
+#icon .btn-danger {
   font-size: 10px;
   border-radius: 50%;
   padding: 5px 9px;
 }
 
-#carrito .btn-dark {
+#icon .btn-dark {
   padding: 0 2px;
   margin: 0 3px;
 }
+
 .m-0 {
   margin: 0;
 }
@@ -640,6 +665,11 @@ button:not(:disabled),
   padding-bottom: 0.5rem !important;
 }
 
+.py-3 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
 .py-5 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
@@ -758,6 +788,7 @@ button:not(:disabled),
   background-size: cover;
   position: relative;
 }
+
 .header .header-guitarra {
   display: none;
 }

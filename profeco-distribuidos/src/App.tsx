@@ -9,6 +9,15 @@ function App() {
       <Header />
       <main className="container-xl mt-5">
         <h2 className='text-center text-uppercase mt-3'>Productos disponibles</h2>
+        <form className="d-flex justify-content-md-between ">
+          <input
+            className="form-control "
+            type="search"
+            placeholder="Buscar productos..."
+            aria-label="Buscar"
+          />
+          <button className="btn btn-outline-primary" type="submit">Buscar</button>
+        </form>
         <div className='row mt-3'>
           <Product />
           <Product />
