@@ -1,10 +1,10 @@
-import SupermarketOfferProps from '../interfaces/SupermarketOfferProps';
+import SupermarketOfferProps from '../../interfaces/SupermarketOfferProps';
 
 export default function SupermarketOffer({ offerText, buttonText, validity, imgRoute }: SupermarketOfferProps) {
 
     return (
         <>
-            <div className='offer-container container-fluid d-flex'>
+            <div className='offer-container container-fluid d-flex justify-content-center'>
                 <div className='container-data d-block'>
 
                     <div className='offer-text-container'>

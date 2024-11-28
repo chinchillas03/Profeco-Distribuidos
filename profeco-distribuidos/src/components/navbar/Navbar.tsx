@@ -1,4 +1,4 @@
-import MenuOption from "./MenuOption";
+import MenuOption from "../menu-option/MenuOption";
 
 export default function Navbar() {
   return (

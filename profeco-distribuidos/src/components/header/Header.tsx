@@ -1,4 +1,4 @@
-
+import profecoimg from "../../assets/img/logo-profeco.png"
 
 export default function Header() {
     return (
@@ -9,12 +9,8 @@ export default function Header() {
 
               <div className="col-3">
                 <a className="navbar-brand" href="#">
-                  <img
-                    src="img/logo-profeco.png"
-                    alt="Logo"
-                    className="img-fluid navbar-img-logo"
-                    
-                  />
+                <img src={profecoimg} alt="Logo" className="img-fluid navbar-img-logo" />
+
                 </a>
               </div>
 

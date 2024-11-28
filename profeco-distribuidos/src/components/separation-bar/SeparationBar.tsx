@@ -3,7 +3,7 @@ export default function SeparationBar() {
     <>
       <div className="container-fluid separation-bar">
         <div className="row">
-          <div className="bar-component  "></div>
+          <div className="bar-component"></div>
         </div>
       </div>
     </>
