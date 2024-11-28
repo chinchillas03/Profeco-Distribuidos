@@ -1,0 +1,77 @@
+
+/*
+    Separation bar
+*/
+.bar-component {
+    height: 0.5vh;
+    background-color: #611232;
+    
+
+  }
+
+.separation-bar{
+    margin-top: 2vh ;
+}
+
+/*
+    Menu Option
+*/
+
+.button-container{
+    margin-top: 2vh;
+}
+
+.button-container .menu-option-btn-active{
+    background-color: #611232;
+    color: white;
+    border: none;
+    padding: 3%;
+    font-size: 1vw;
+    font-weight: 700;
+    border-radius: 0.2vw;
+}
+
+.button-container .menu-option-btn-unactive{
+
+    
+    background-color: white;
+    border: 1px solid #611232;
+    color: #611232;
+    padding: 3%;
+    font-size: 1vw;
+    font-weight: 700;
+    border-radius: 0.2vw;
+}
+
+
+/*
+    Supermarket
+*/
+
+.offer-text-container{
+    font-size: 1vw; 
+    font-weight: 600;
+    color: #611232;
+}
+
+.supermarket-logo img{
+    margin-left: 2vw;
+    width: 5vw;
+}
+
+.offer-container{
+    background-color: #c0c0c043;
+    padding: 2vw;
+    margin: 2vw;
+    border-radius: 2vw;
+}
+
+.offers{
+    margin-top: 2vw;
+}
+
+.page-footer{
+    background-color: #611232;
+    height: 10vh;
+
+}

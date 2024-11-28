@@ -4,7 +4,7 @@ export default function Header() {
     return (
       <div>
         <nav className="navbar bg-white">
-          <div className="container">
+          <div className="container-fluid">
             <div className="row w-100 align-items-center">
 
               <div className="col-3">
