@@ -31,13 +31,13 @@ router.put('/:id',
     body('precio')
         .notEmpty().withMessage('El precio del producto es obligatorio'),
     manejarErroresDeEntrada,
-    ProductoDAO.consultarProductoPorId
+    ProductoDAO.actualizarProducto
 )
 
 router.delete('/:id', 
     param('id').isMongoId().withMessage('id no valido'),
     manejarErroresDeEntrada,
-    ProductoDAO.consultarProductoPorId
+    ProductoDAO.eliminarProducto
 )
 
 export default router
