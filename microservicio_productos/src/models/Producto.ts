@@ -1,10 +1,9 @@
 import mongoose, {Schema, Document, PopulatedDoc, Types} from "mongoose";
-import { IPromocion } from "./Promocion";
 
 export interface IProducto extends Document {
     nombre: string
     precio: number
-    promociones: PopulatedDoc<IPromocion & Document>[]
+    descripcion: string
 }
 
 const ProductoSchema : Schema = new Schema({
@@ -18,12 +17,11 @@ const ProductoSchema : Schema = new Schema({
         required: true,
         min: 0
     },
-    promociones:[
-        {
-            type: Types.ObjectId,
-            ref: 'Promocion'
-        }
-    ]
+    descripcion: {
+        type: String,
+        required: true,
+        trim: true
+    }
 }, {timestamps: true})
 
 const Producto = mongoose.model<IProducto>('Producto', ProductoSchema)
