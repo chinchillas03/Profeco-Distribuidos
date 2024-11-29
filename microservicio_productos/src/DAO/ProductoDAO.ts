@@ -42,6 +42,7 @@ export class ProductoDAO {
             }
             producto.nombre = Request.body.nombre
             producto.precio = Request.body.precio
+            producto.descripcion = Request.body.descripcion
             await producto.save()
             Response.send('Producto actualizado')
         } catch (error) {

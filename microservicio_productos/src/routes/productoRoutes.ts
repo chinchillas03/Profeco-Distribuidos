@@ -10,6 +10,8 @@ router.post('/',
         .notEmpty().withMessage('El nombre del producto es obligatorio'),
     body('precio')
         .notEmpty().withMessage('El precio del producto es obligatorio'),
+    body('descripcion')
+        .notEmpty().withMessage('La descripcion del producto es obligatoria'),
     manejarErroresDeEntrada,
     ProductoDAO.crearProducto
 )
@@ -30,6 +32,8 @@ router.put('/:id',
         .notEmpty().withMessage('El nombre del producto es obligatorio'),
     body('precio')
         .notEmpty().withMessage('El precio del producto es obligatorio'),
+    body('descripcion')
+        .notEmpty().withMessage('La descripcion del producto es obligatoria'),
     manejarErroresDeEntrada,
     ProductoDAO.actualizarProducto
 )
