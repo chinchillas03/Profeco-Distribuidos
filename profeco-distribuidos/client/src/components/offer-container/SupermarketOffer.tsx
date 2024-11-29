@@ -25,8 +25,9 @@ export default function SupermarketOffer({ offerText, buttonText, validity, imgR
                     <img src={imgRoute} alt="" />
                 </div>
             </div>
-        </>
 
+        </>
+    
 
     );
 }

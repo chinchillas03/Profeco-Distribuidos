@@ -1,5 +1,6 @@
 import SupermarketOffer from "./SupermarketOffer";
 
+
 export default function OfferContainer() {
   return (
     <>
