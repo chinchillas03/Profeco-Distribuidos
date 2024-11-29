@@ -44,4 +44,14 @@ router.delete('/:id',
     ProductoDAO.eliminarProducto
 )
 
+router.delete('/:id', 
+    param('id').isMongoId().withMessage('id no valido'),
+    manejarErroresDeEntrada,
+    ProductoDAO.eliminarProducto
+)
+
+router.post('/:wishlistId/:productoId', 
+    ProductoDAO.agregarProductoWishlist
+)
+
 export default router

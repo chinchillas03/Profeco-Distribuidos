@@ -1,5 +1,7 @@
 import type { Request, Response } from "express"
 import Producto from "../models/Producto"
+import Wishlist from "../models/Wishlist"
+import { Types } from "mongoose";
 
 export class ProductoDAO {
     static crearProducto = async (Request, Response) =>{
@@ -11,7 +13,28 @@ export class ProductoDAO {
             console.log(error)
         }
     }
-    static consultarTodosLosProductos = async (Request, Response) =>{
+    static agregarProductoWishlist = async (Request, Response) => {
+        const {productId, wishlistId} = Request.params
+        console.log(productId)
+        console.log(wishlistId)
+        try {
+            const product = await Producto.findById(productId);
+            if (!product) {
+                const error = new Error('Producto no encontrado')
+                return Response.status(404).json({error: error.message})
+            }
+            const wishlist = await Wishlist.findById(wishlistId);
+            if (!wishlist) {
+                const error = new Error('Wishlist no encontrada')
+                return Response.status(404).json({error: error.message})
+            }
+            wishlist.productos.push(productId)
+            await wishlist.save();
+        } catch (error) {
+            Response.status(500).json({ error: 'Hubo un error' })
+        }
+    }
+    static consultarTodosLosProductos = async (Request, Response) => {
         try {
             const producto = await Producto.find({})
             Response.json(producto)
