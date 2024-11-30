@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import IndexPage from "./pages/IndexPage";
 import LoginPage from "./pages/LoginPage";
 import CreateProductsPage from "../../../app-supermercado/client/app-supermercado/src/pages/CreateProductsPage";
-import RegisterUser from "./pages/registerUserPage";
+import RegisterUser from "./pages/registerUserPage/registerUserPage";
 
 function App() {
   return (
