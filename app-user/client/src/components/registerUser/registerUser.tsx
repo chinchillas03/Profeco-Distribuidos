@@ -2,16 +2,17 @@ import "./registerUser.css";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+
 export default function RegisterForm() {
-
-
     const [formData, setFormData] = useState({
         nombre: '',
         apellido: '',
         email: '',
-        password: ''
+        password: '',
+        confirmPassword: ''
     });
     const [error, setError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
     const navigate = useNavigate();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,15 +21,40 @@ export default function RegisterForm() {
             ...prevState,
             [name]: value
         }));
+
+        if (name === 'confirmPassword' || name === 'password') {
+            if (name === 'password' && formData.confirmPassword && value !== formData.confirmPassword) {
+                setPasswordError('Las contraseñas no coinciden');
+            } else if (name === 'confirmPassword' && value !== formData.password) {
+                setPasswordError('Las contraseñas no coinciden');
+            } else {
+                setPasswordError('');
+            }
+        }
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setError('');
+
+        if (formData.password !== formData.confirmPassword) {
+            setPasswordError('Las contraseñas no coinciden');
+            return;
+        }
+
+        if (passwordError) {
+            return;
+        }
+
         try {
             const response = await axios.post(
                 'http://localhost:4006/api/usuarios/',
-                formData,
+                {
+                    nombre: formData.nombre,
+                    apellido: formData.apellido,
+                    email: formData.email,
+                    password: formData.password
+                },
                 {
                     headers: {
                         'Content-Type': 'application/json'
@@ -55,6 +81,7 @@ export default function RegisterForm() {
             }
         }
     };
+
     return (
         <div className="container">
             <h1 className="welcome-title">Registro de Usuario</h1>
@@ -111,7 +138,20 @@ export default function RegisterForm() {
                                 required
                             />
                         </div>
-                        <button className="btn btn-primary" type="submit">
+                        <div className="form-group">
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                className="form-control"
+                                placeholder="Confirmar Contraseña"
+                                value={formData.confirmPassword}
+                                onChange={handleChange}
+                                required
+                            />
+                            {passwordError && <p className="error-message">{passwordError}</p>}
+                        </div>
+                        <button className="btn btn-primary" type="submit" disabled={!!passwordError}>
                             Registrarse
                         </button>
                         <p className="login-link">
