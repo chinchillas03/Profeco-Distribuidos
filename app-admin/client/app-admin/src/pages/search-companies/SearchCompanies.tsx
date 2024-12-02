@@ -41,11 +41,12 @@ export default function SearchCompanies() {
       <div className="company-cards-container">
         {companies.map((company) => (
           <CompanyCard
-            key={company._id} // Unique key for each card
+            key={company._id} 
+            id = {company._id}
             name={company.nombre}
             line={company.businessLine}
             date={company.dateAdded}
-            numberOfReports={company.reports.length.toString()} // Convert to string to match your props type
+            numberOfReports={company.reports.length.toString()} 
           />
         ))}
       </div>

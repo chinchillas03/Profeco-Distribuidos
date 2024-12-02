@@ -10,8 +10,11 @@ router.post('/', (req, res) => {
 router.get('/', (req, res)=>{
 
     EmpresaDAO.obtenerEmpresas(req, res); 
-
-
 })  
+
+
+router.delete('/:id', (req, res) =>{
+    EmpresaDAO.eliminarEmpresa(req, res);
+})
 
 export default router;
