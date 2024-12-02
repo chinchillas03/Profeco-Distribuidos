@@ -5,7 +5,7 @@ export interface IEmpresa extends Document {
     nombre: string;
     businessLine: string;
     dateAdded: string;
-    reports: string[]; // Specify the type of array elements
+    reports: string[]; 
 }
 
 const EmpresaSchema: Schema = new Schema(
@@ -19,7 +19,7 @@ const EmpresaSchema: Schema = new Schema(
             type: String,
             required: true,
         },
-        businessLine: { // Corrected typo
+        businessLine: { 
             type: String,
             required: true,
         },
@@ -28,7 +28,7 @@ const EmpresaSchema: Schema = new Schema(
             required: true,
         },
         reports: {
-            type: [String], // Array of strings
+            type: [String], 
             required: true,
         },
     },

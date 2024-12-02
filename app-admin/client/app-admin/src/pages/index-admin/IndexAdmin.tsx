@@ -14,13 +14,14 @@ export default function IndexAdmin() {
         <h3>Gestionar Empresas</h3>
       </div>
       <div className="container options-container d-flex">
-        <Link to="/add" className="custom-link" >
-          <OptionCard icon="bi bi-plus" text="Agregar empresa" />
+        <Link to="/add" className="custom-link col-6" >
+          <OptionCard icon="bi bi-plus " text="Agregar empresa" />
+        </Link>
+        <Link to="/search" className="custom-link col-6" >
+          <OptionCard icon="bi bi-pencil-square col-6" text="Consultar empresas" />
         </Link>
 
-        <OptionCard icon="bi bi-pencil-square" text="Consultar empresas" />
-        <OptionCard icon="bi bi-trash" text="Eliminar empresa" />
-        <OptionCard icon="bi bi-search" text="Editar empresas" />
+
       </div>
     </>
   );
