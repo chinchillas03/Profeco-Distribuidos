@@ -7,6 +7,8 @@ router.post('/', (req, res) => {
     EmpresaDAO.crearEmpresa(req, res); 
 });
 
+router.put('/empresa/:id/producto', EmpresaDAO.agregarProductoALista);
+
 router.get('/', (req, res)=>{
 
     EmpresaDAO.obtenerEmpresas(req, res); 

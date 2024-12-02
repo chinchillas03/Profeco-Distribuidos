@@ -27,7 +27,7 @@ export default function CreateCompanyForm() {
         }
       );
       setMessage("Empresa registrada exitosamente!");
-      setFormData({ rfc: "", nombre: "", businessLine: "" });
+      setFormData({ rfc: "", nombre: "", businessLine: "" }); // Clear form
     } catch (err) {
       console.error(err);
       setMessage("Error al registrar la empresa.");

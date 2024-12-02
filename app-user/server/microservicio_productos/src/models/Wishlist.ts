@@ -1,5 +1,5 @@
 import mongoose, {Schema, Document, PopulatedDoc, Types} from "mongoose";
-import { IProducto } from "./Producto";
+import { IProducto } from "../../../../../app-supermercado/server/src/models/Producto";
 
 export interface IWishlist extends Document {
     nombre: string

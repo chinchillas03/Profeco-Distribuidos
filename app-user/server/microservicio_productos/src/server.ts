@@ -12,7 +12,5 @@ const app = express()
 
 app.use(express.json())
 
-app.use('/api/productos', productoRoutes)
-app.use('/api/wishlist', wishlistRoutes)
 
 export default app
