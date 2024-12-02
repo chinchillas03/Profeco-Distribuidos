@@ -1,0 +1,43 @@
+.card-container{
+    background-color: #d9d9d99b;
+    padding: 3%;
+    border-radius: 2vw;
+}   
+.company-name{
+    align-items: center;
+}
+
+.company-name h3{
+    font-size: 3vw;
+    color: #611232;
+}
+.company-name i {
+
+    margin: 0.5vw;
+    margin-left: 2vw;
+    font-size: 2vw;
+}
+
+.bi-trash{
+    color: rgb(178, 20, 20);
+}
+
+.bi-pencil-square{
+    color: rgb(0, 0, 0);
+}
+
+.bi-eye{
+    font-size: 1.2vw;
+    color: #611232;
+}
+
+.company-reports{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.number-report-row{
+    display: flex;
+    align-items: center;
+}
