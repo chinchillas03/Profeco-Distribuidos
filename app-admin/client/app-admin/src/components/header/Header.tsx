@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function Header() {
     return (
       <div>
@@ -8,7 +8,7 @@ export default function Header() {
             <div className="row w-100 align-items-center">
   
               <div className="col-3">
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href="/">
                   <img 
                     src={`/img/logo-profeco.png`} 
                     alt="Logo" 
