@@ -2,6 +2,7 @@ import {Router} from 'express';
 import {body, param} from 'express-validator';
 import {UsuarioDAO} from '../DAO/UsuarioDAO';
 import {manejarErroresDeEntrada} from '../middleware/validacion';
+import Usuario from '../models/Usuario';
 
 const router = Router()
 
@@ -46,6 +47,10 @@ router.delete('/:id',
     param('id').isMongoId().withMessage('id no valido'),
     manejarErroresDeEntrada,
     UsuarioDAO.eliminarUsuario
+)
+
+router.post(
+'/validate', UsuarioDAO.validarUsuario
 )
 
 export default router;

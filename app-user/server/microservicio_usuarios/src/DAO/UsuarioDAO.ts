@@ -52,4 +52,25 @@ export class UsuarioDAO {
             console.log(error)
         }
     }
+
+    static validarUsuario = async (Request, Response) => {
+        const { email, password } = Request.body
+        try {
+            const usuario = await Usuario.findOne({email})
+            if (!usuario) {
+                return Response.status(404).json({error: 'Usuario no encontrado'})
+            }
+
+        const esPasswordCorrecto = await password === usuario.password;
+        
+        if (!esPasswordCorrecto) {
+            return Response.status(401).json({error: 'Contraseña incorrecta'})
+        }
+
+        return Response.json(usuario)
+        } catch (error) {
+            console.log(error)
+            Response.status(500).json({error: 'Error en el servidor'})
+        }
+}
 }
