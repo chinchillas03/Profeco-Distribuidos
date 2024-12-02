@@ -1,5 +1,5 @@
 import React from 'react';
-import AddCompanyPage from './pages/AddCompanyPage.tsx'
+import AddCompanyPage from './pages/add-company/AddCompanyPage.tsx'
 
 function App() {
   return (
