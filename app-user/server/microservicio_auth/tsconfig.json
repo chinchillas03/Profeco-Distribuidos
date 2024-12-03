@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "rootDir": "../", 
+      "outDir": "./dist",
+      "module": "CommonJS",
+      "target": "ES6",
+      "strict": true,
+      "esModuleInterop": true
+    },
+    "include": [
+      "../shared/**/*.ts", // Incluye archivos compartidos
+      "./src/**/*.ts" // Incluye el microservicio actual
+    ]
+  }

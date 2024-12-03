@@ -1,0 +1,22 @@
+{
+    "configurations": [
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Profeco",
+            "program": "${workspaceFolder}/src/index.ts",
+            "runtimeArgs": [
+                "--nolazy",
+                "-r",
+                "ts-node/register"
+            ],
+            "sourceMaps": false,
+            "cwd": "${workspaceFolder}",
+            "envFile": "${workspaceFolder}/.env",
+            "outFiles": [
+                "${workspaceFolder}/dist/**/*.js"
+            ]
+        }
+    ]
+}
