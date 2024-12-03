@@ -1,4 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
+import Producto from './Producto'
 
 export interface IEmpresa extends Document {
     rfc: string;
@@ -34,7 +35,7 @@ const EmpresaSchema: Schema = new Schema(
         },
 
         products: {
-            type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Producto' }], 
+            type: [{ type: mongoose.Schema.Types.ObjectId, ref: Producto }], 
             required: true,
         },
     },

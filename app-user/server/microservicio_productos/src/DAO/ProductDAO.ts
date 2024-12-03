@@ -7,7 +7,7 @@ class ProductoDAO {
     static obtenerProductosRegistrados = async (req: Request, res: Response): Promise<void> => {
         try {
      
-            const empresas = await Empresa.find().populate('productos'); 
+            const empresas = await Empresa.find().populate('products'); 
 
             if (!empresas) {
                 res.status(404).send("No se encontraron empresas");
