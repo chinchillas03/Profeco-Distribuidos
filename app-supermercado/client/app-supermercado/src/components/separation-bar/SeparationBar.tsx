@@ -1,3 +1,5 @@
+import './separationBar.css'
+
 export default function SeparationBar() {
   return (
     <>

@@ -1,0 +1,12 @@
+.bar-component{
+    width: 100vw;
+    height: 3vh;
+    background-color: #611232;
+}
+
+.top-message h3{
+    font-size: 3vw;
+    color: #611232;
+    font-weight: 600;
+    margin-top: 2vw;
+}

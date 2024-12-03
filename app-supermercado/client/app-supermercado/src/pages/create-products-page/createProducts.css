@@ -1,0 +1,13 @@
+.btn{
+    width: 30vw;
+    background-color: #611232;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+
+.btn:hover{
+    border: 3px solid #611232 ;
+    background-color: white;
+    color: #611232;
+}
