@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import OfferCard from "../../components/offer-card/OfferCard"; // Asegúrate de importar el componente OfferCard
+import OfferCard from "../../components/offer-card/OfferCard"; 
 import "./seeProductsRegistered.css";
 import SeparationBar from "../../components/separation-bar/SeparationBar";
 import Header from "../../components/header/Header";
@@ -17,7 +17,7 @@ interface Product {
 export default function SeeProductsRegistered() {
   const [products, setProducts] = useState<Product[]>([]);
 
-  // Hacer la solicitud al backend para obtener los productos registrados
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -25,7 +25,7 @@ export default function SeeProductsRegistered() {
           "http://localhost:4008/api/productos/productos-registrados"
         );
         const data = await response.json();
-        setProducts(data); // Guardamos los datos obtenidos en el estado
+        setProducts(data); 
       } catch (error) {
         console.error("Error al cargar los productos:", error);
       }

@@ -1,3 +1,4 @@
+/*
 import jwt from 'jsonwebtoken';
 import { validateUser } from '../services/user-service';
 import { Token, User } from './types';
@@ -82,3 +83,5 @@ export const oauthModel = {
     return tokenScopes.includes(scope);
   },
 };
+
+*/

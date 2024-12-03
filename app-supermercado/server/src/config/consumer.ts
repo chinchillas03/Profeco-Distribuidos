@@ -1,4 +1,4 @@
-
+/*
 import { rabbitMQ } from 'shared/rabbitmq'; 
 
 
@@ -22,3 +22,4 @@ export async function consumeAuthEvents() {
 consumeAuthEvents().catch((error) => {
   console.error('Error al consumir los mensajes de RabbitMQ:', error);
 });
+*/

@@ -1,3 +1,4 @@
+/*
 import axios from 'axios';
 import dotenv from 'dotenv';
 
@@ -14,3 +15,4 @@ export const validateUser = async (email: string, password: string): Promise<any
     return null;
   }
 };
+*/

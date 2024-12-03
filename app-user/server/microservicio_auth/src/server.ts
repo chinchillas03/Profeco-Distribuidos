@@ -1,3 +1,4 @@
+/*
 import express from 'express';
 import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes';
@@ -15,3 +16,5 @@ app.use('/api/auth', authRoutes);
 
 console.log('Servidor de autenticación funcionando');
 export default app;
+
+*/

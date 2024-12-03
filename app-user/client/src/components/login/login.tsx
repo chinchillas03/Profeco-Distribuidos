@@ -1,3 +1,4 @@
+/*
 import './login.css';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -92,4 +93,9 @@ export default function Login() {
             </div>
         </div>
     );
+}
+*/
+
+export default function Login(){
+    
 }

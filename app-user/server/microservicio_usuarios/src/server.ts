@@ -1,3 +1,5 @@
+/*
+
 import express from "express";
 import dotenv from 'dotenv';
 import { connectDB } from "./config/db";
@@ -18,3 +20,5 @@ app.use('/api/usuarios', usuarioRoutes)
 
 
 export default app
+
+*/
