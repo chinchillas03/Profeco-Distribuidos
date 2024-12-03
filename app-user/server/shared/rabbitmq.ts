@@ -1,3 +1,4 @@
+/*
 import amqp from 'amqplib';
 
 class RabbitMQ {
@@ -53,3 +54,4 @@ class RabbitMQ {
 }
 
 export const rabbitMQ = RabbitMQ.getInstance();
+*/

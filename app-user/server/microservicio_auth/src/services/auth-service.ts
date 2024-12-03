@@ -1,3 +1,5 @@
+
+/*
 import OAuth2Server from 'oauth2-server';
 import { oauthModel } from '../model/oauth-model';
 import { rabbitMQ } from 'shared/rabbitmq';
@@ -48,3 +50,5 @@ export const authService = {
     }
   },
 };
+
+*/

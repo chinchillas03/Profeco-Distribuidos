@@ -1,4 +1,5 @@
-import express from 'express';
+
+/*import express from 'express';
 import { authService } from '../services/auth-service';
 const router = express.Router();
 
@@ -8,3 +9,5 @@ router.post('/token', (req, res, next) => {
 });
 
 export default router;
+
+*/

@@ -1,3 +1,5 @@
+/*
+
 import type { Request, Response } from "express";
 import Usuario from "../models/Usuario";
 import { Types } from "mongoose";
@@ -74,3 +76,5 @@ export class UsuarioDAO {
         }
 }
 }
+
+*/
