@@ -5,33 +5,46 @@ import { Request, Response } from 'express';
 
 export const authServer = new OAuth2Server({
   model: oauthModel,
-    accessTokenLifetime: 3600, // 1 hora
-    refreshTokenLifetime: 7 * 24 * 3600, // 7 días
-  });
-  
+  accessTokenLifetime: 3600, 
+  refreshTokenLifetime: 7 * 24 * 3600,
+});
+
 export const authService = {
-    async login(req: Request, res: Response) {
+  async login(req: Request, res: Response) {
+    try {
+      const { email, password } = req.body;
+      console.log('Petición de login recibida:', email, password);
+      if (!email || !password) {
+        return res.status(400).json({ error: 'Email y contraseña son requeridos.' });
+      }
+
+     
+      req.body = {
+        grant_type: 'password',
+        client_id: 'raul',
+        client_secret: 'raulsecreto',
+        username: email, 
+        password: password,
+      };
+
       const request = new OAuth2Server.Request(req);
       const response = new OAuth2Server.Response(res);
-  
-      try {
-        // Intentamos generar el token de acceso
-        
-        const token = await authServer.token(request, response);
-  
-        // Publicamos un mensaje a RabbitMQ
-        const message = {
-          event: 'user_logged_in',
-          userId: token.user.id,
-          timestamp: new Date().toISOString(),
-        };
-        await rabbitMQ.publish('auth_events', message);
-        console.log('Mensaje enviado a RabbitMQ:', message);
-  
-        // Adaptamos el res de OAuth2Server para manejar json
-        res.status(200).json(token);
-      } catch (error) {
-        console.error('Error en login:', error);
-      }
+
+      
+      const token = await authServer.token(request, response);
+
+      const message = {
+        event: 'user_logged_in',
+        userId: token.user.id,
+        timestamp: new Date().toISOString(),
+      };
+      await rabbitMQ.publish('auth_events', message);
+      console.log('Mensaje enviado a RabbitMQ:', message);
+
+      res.status(200).json(token);
+    } catch (error) {
+      console.error('Error en login:', error);
+      res.status(500).json({ error: 'Error interno del servidor.' });
     }
-  };
+  },
+};
