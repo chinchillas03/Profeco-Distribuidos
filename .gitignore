@@ -1,5 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 node_modules
+=======
 =======
 node_modules/
 app-user/client/node_modules/.cache/tsconfig.tsbuildinfo
@@ -16,4 +18,7 @@ app-user/client/node_modules/.cache/default-development/12.pack
 app-user/client/node_modules/.cache/default-development/10.pack
 app-user/client/node_modules/.cache/default-development/11.pack
 app-user/client/node_modules/.cache/default-development/1.pack
+<<<<<<< HEAD
+>>>>>>> 3cb99b13c9ca3430c89148ef91f247f7a343d6b0
+=======
 >>>>>>> 3cb99b13c9ca3430c89148ef91f247f7a343d6b0
