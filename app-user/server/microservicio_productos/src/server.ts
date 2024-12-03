@@ -1,16 +1,16 @@
-import express from "express"
-import dotenv from 'dotenv'
-import { connectDB } from "./config/db"
-import productoRoutes from './routes/productoRoutes'
-import wishlistRoutes from './routes/wishlistRoutes'
+import express from "express";
+import dotenv from 'dotenv';
+import { connectDB } from "./config/db";
+import productoRoutes from './routes/productoRoutes';
 
-dotenv.config()
+dotenv.config();
 
-connectDB()
+connectDB();
 
-const app = express()
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
 
+app.use('/api/productos', productoRoutes); 
 
-export default app
+export default app;

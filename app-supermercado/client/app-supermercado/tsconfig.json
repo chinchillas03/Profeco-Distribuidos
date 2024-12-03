@@ -16,7 +16,7 @@
   },
   "include": [
     "src/**/*"                                  
-  ],
+, "../../../app-user/client/src/pages/see-products-registered", "../../../app-user/client/src/components/offer-card"  ],
   "exclude": [
     "node_modules",                             
     "build",                                    
