@@ -7,7 +7,7 @@ export interface OptionCardProps {
 
 export default function OptionCard({ icon, text }: OptionCardProps) {
   return (
-    <div className="container card-container">
+    <div className="container ">
       <div className="row card col-12">
         <div className="container d-flex card-info">
           <div className="icon">
